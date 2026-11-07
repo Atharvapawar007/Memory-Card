@@ -95,9 +95,36 @@ h1 {
 }
 
 #bottom p {
-  margin: 0;
+  margin: 0 0 0.35rem;
   color: #e6f1ff;
   font-size: 1rem;
+}
+
+#status {
+  min-height: 1.5em;
+  font-weight: 700;
+}
+
+#bottom #status[data-status='lost'] {
+  color: #ffb4b4;
+}
+
+#bottom #status[data-status='won'] {
+  color: var(--yellow);
+}
+
+/* LOADING / ERROR */
+
+.notice {
+  display: grid;
+  gap: 1rem;
+  min-height: 100vh;
+  place-content: center;
+  margin: 0;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 /* POKEMON GRID */
@@ -110,7 +137,6 @@ main {
 #pokemon-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(4, auto);
   gap: 1.5rem;
   align-items: stretch;
 }
@@ -124,6 +150,9 @@ main {
   min-width: 0;
   padding: 0.85rem;
   overflow: hidden;
+  font: inherit;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
 
   border: 1px solid var(--border);
   border-radius: 22px;
@@ -193,12 +222,9 @@ main {
 /* POKEMON NAME */
 
 .info {
+  display: block;
   padding: 1rem 0.35rem 0.4rem;
   text-align: center;
-}
-
-.info h3 {
-  margin: 0;
   color: var(--ink);
   font-size: 1.1rem;
   font-weight: 800;
@@ -235,7 +261,8 @@ main {
   line-height: 1.6;
 }
 
-#winner-modal button {
+#winner-modal button,
+.notice button {
   padding: 0.8rem 1.4rem;
   border: 0;
   border-radius: 999px;
@@ -250,12 +277,14 @@ main {
     box-shadow 160ms ease;
 }
 
-#winner-modal button:hover {
+#winner-modal button:hover,
+.notice button:hover {
   transform: translateY(-2px);
   box-shadow: 0 7px 0 #ad2638;
 }
 
-#winner-modal button:active {
+#winner-modal button:active,
+.notice button:active {
   transform: translateY(2px);
   box-shadow: 0 3px 0 #ad2638;
 }
@@ -297,7 +326,7 @@ main {
     border-radius: 18px;
   }
 
-  .info h3 {
+  .info {
     font-size: 0.95rem;
   }
 

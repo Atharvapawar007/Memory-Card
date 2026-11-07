@@ -10,6 +10,7 @@ your score, but don't click the same Pokémon twice.
 - Clicking a Pokémon for the first time adds a point.
 - Clicking a Pokémon you have already chosen resets your score.
 - Click every Pokémon once to win.
+- Your best score is saved in the browser.
 
 ## Getting started
 
@@ -26,18 +27,17 @@ is required when the app loads.
 
 ## Available commands
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Create a production build in `dist/` |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Format project files with Prettier |
-| `npm run format:check` | Check formatting with Prettier |
+| Command                | Description                          |
+| ---------------------- | ------------------------------------ |
+| `npm run dev`          | Start the development server         |
+| `npm run build`        | Create a production build in `dist/` |
+| `npm run preview`      | Preview the production build locally |
+| `npm run lint`         | Run ESLint                           |
+| `npm run format`       | Format project files with Prettier   |
+| `npm run format:check` | Check formatting with Prettier       |
 
 ## Built with
 
 - React
 - Vite
-- Axios
 - PokéAPI
