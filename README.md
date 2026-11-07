@@ -1,16 +1,43 @@
-# React + Vite
+# Pokémon Memory Card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A memory game built with React and Vite. Click each Pokémon card once to grow
+your score, but don't click the same Pokémon twice.
 
-Currently, two official plugins are available:
+## How to play
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- The game loads 16 distinct Pokémon, selected from the first 200 Pokémon.
+- Every card click shuffles the cards.
+- Clicking a Pokémon for the first time adds a point.
+- Clicking a Pokémon you have already chosen resets your score.
+- Click every Pokémon once to win.
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+You need Node.js and npm installed.
 
-## Expanding the ESLint configuration
+```sh
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open the local URL printed by Vite in your browser. The game retrieves Pokémon
+names and images from [PokéAPI](https://pokeapi.co/), so an internet connection
+is required when the app loads.
+
+## Available commands
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run build` | Create a production build in `dist/` |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
+| `npm run format` | Format project files with Prettier |
+| `npm run format:check` | Check formatting with Prettier |
+
+## Built with
+
+- React
+- Vite
+- Axios
+- PokéAPI
